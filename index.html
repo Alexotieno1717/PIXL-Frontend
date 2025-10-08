@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="color-scheme" content="dark">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
     <title>pixel</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-pixel-dark text-pixel-light h-dvh w-full overflow-clip relative">
+<body class="bg-pixl-dark text-pixl-light relative flex h-dvh w-full flex-col md:block md:overflow-clip">
     <!--  Background img  -->
-    <div class="absolute inset-0 overflow-clip">
+    <div class="fixed inset-0 overflow-clip">
         <img
                 src="/images/Official-Login-BG.png"
                 alt=""
                 class="absolute inset-y-0 left-[15%] h-full w-full object-cover mask-l-from-80% opacity-30"
         />
     </div>
+    <!--            class="lg:mt-16 md:mt-0 grid place-items-center lg:h-full isolate max-w-[1000px] mx-auto"-->
 
-    <main class="grid place-items-center h-full isolate max-w-[1000px] mx-auto">
-        <div class="flex gap-16 justify-between items-center w-full">
-            <!--    left panel    -->
+    <main
+        class="isolate mx-auto grid max-w-[1000px] flex-grow place-items-center px-8 max-md:pt-16 md:h-full xl:max-w-6xl"
+
+    >
+        <div class="flex w-full flex-col items-center justify-between gap-8 lg:flex-row md:gap-16">
+            <!--    Logo + Word Stack    -->
             <div>
                 <div class="flex items-baseline gap-3">
                     <svg
@@ -66,7 +71,7 @@
                     </svg>
                     <div
                         aria-hidden="true"
-                        class="text-pixel relative hidden text-4xl uppercase md:block"
+                        class="hidden lg:block text-pixel relative text-4xl uppercase"
                     >
                         <!-- Top -->
                         <div
@@ -117,7 +122,7 @@
                 </div>
             </div>
 
-            <!--    right panel    -->
+            <!--    Action Buttons    -->
             <div class="max-w-full pb-16 min-[360px]:w-72 sm:w-80">
                 <h1 class="text-pixel text-center text-2xl sm:text-3xl md:text-left">
                     A place for the cool squares.
@@ -154,13 +159,36 @@
         </div>
     </main>
 
-    <footer class="fixed bottom-0 inset-x-0 pb-3">
-        <div class="flex flex-col gap-1.5 items-center text-pixel p-4">
-            <p>All Rights Reserved. pixel Media For Everyone*</p>
-            <p class="opacity-50 text-xs">*except for badgers, they’re $&@*holes.</p>
+    <footer class="relative pb-3 md:fixed md:inset-x-0 md:bottom-0">
+        <div class="text-pixl flex flex-col items-center gap-1.5 p-4 text-center">
+            <p>All Rights Reserved. Pixl Media For Everyone*</p>
+            <p class="text-xs opacity-50">
+                *except for badgers, they’re $&@*holes.
+            </p>
         </div>
         <!-- White noise -->
-        <div class="absolute bottom-0 h-4 inset-x-0 bg-[url(/images/white-noise.gif)]"></div>
+        <div
+                class="absolute inset-x-0 bottom-0 h-4 bg-[url(/images/white-noise.gif)]"
+        ></div>
+        <!-- Pictogram -->
+        <svg
+                class="absolute right-4 bottom-8 w-7 grayscale max-sm:hidden"
+                viewBox="0 0 29 43"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+        >
+            <g fill="#ECA749" opacity=".5" style="mix-blend-mode: luminosity">
+                <path
+                        d="M7.058 0H0v7.058h7.058V0Zm0 7.058H0v7.059h7.058V7.058ZM28.234 0h-7.058v7.058h7.058V0Zm0 7.059h-7.058v7.058h7.058V7.059ZM7.058 28.233H0v7.059h7.058v-7.059Z"
+                ></path>
+                <path
+                        d="M7.058 35.291H0v7.059h7.058v-7.06Zm21.176-7.058h-7.058v7.059h7.058v-7.059Z"
+                ></path>
+                <path
+                        d="M28.234 35.291h-7.058v7.059h7.058v-7.06ZM14.117 21.175H7.059v7.058h7.058v-7.058Zm7.058-7.058h-7.058v7.058h7.058v-7.058Zm-7.058 0H7.059v7.058h7.058v-7.059Zm7.058 7.058h-7.058v7.058h7.058v-7.058Z"
+                ></path>
+            </g>
+        </svg>
     </footer>
 </body>
 </html>
